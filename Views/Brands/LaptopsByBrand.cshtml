@@ -1,0 +1,12 @@
+﻿@model Dictionary<Brand, List<Laptop>>
+
+@foreach (KeyValuePair<Brand, List<Laptop>> kvp in Model) 
+{
+    <div>
+        <h2>@kvp.Key.Name</h2>
+        @foreach (var v in kvp.Value) 
+        {
+            <p>@v.Model</p>
+        }
+    </div>
+}

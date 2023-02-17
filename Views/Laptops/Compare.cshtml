@@ -1,0 +1,33 @@
+﻿@model Comparison
+
+<style>
+    td {
+        padding: 20px;
+    }
+</style>
+
+<table class="table table-striped">
+    <tr>
+        <td scope="col">Compare</td>
+        <td scope="col">@Model.Laptop1.Model</td>
+        <td scope="col">@Model.Laptop2.Model</td>
+    </tr>
+
+    <tr>
+        <td scope="col">Brand</td>
+@*        <td scope="col">@Model.Laptop1.Brand.Name</td>
+        <td scope="col">@Model.Laptop2.Brand.Name</td>*@
+    </tr>
+
+    <tr>
+        <td scope="col">Price</td>
+        <td scope="col">@Model.Laptop1.Price</td>
+        <td scope="col">@Model.Laptop2.Price</td>
+    </tr>
+
+    <tr>
+        <td scope="col">Year</td>
+        <td scope="col">@Model.Laptop1.Year</td>
+        <td scope="col">@Model.Laptop2.Year</td>
+    </tr>
+</table>

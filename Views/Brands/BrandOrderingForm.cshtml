@@ -1,0 +1,57 @@
+﻿@model List<Brand>
+
+<form asp-controller="Brands" asp-action="BrandOrdering">
+    <p>Select Brand</p>
+    <select name="brand">
+        @foreach (var v in Model) {
+            <option>@v.Name</option>
+        }
+    </select>
+
+    <br />
+    <br />
+
+    <label for="sort">Order by price</label>
+    <input value="price"  type="radio" name="sort"/>
+    <label for="sort">Order by year</label>
+    <input value="year" type="radio" name="sort"/>
+
+    <br />
+    <br />
+
+    <label for="order">Ascending</label>
+    <input value="asc" type="radio" name="order"/>
+    <label for="order">Descending</label>
+    <input value="desc" type="radio" name="order"/>
+
+    <br />
+    <br />
+
+    <label for="filter">Filter By Price</label>
+    <input value="price" type="radio" name="filter"/>
+
+    <br />
+    <br />
+
+    <label for="filter">Filter by year</label>
+    <input value="year" type="radio" name="filter"/>
+
+    <br />
+    <br />
+
+    <label for="highorlow">Higher than</label>
+    <input  value="higher" type="radio" name="highorlow" />
+    <label for="highorlow">Lower than</label>
+    <input  value="lower" type="radio" name="highorlow" />
+
+    <br />
+    <br />
+
+    <label for="num">Price or Year</label>
+    <input type="number" name="num"/>
+
+    <br />
+    <br />
+
+    <button type="submit">Submit</button>
+</form>

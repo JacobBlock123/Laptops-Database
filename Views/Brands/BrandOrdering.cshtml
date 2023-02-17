@@ -1,0 +1,10 @@
+﻿@model List<Laptop>
+
+@foreach (var v in Model) {
+    <div>
+        <h3>@v.Model</h3>
+        <p>@v.Price</p>
+        <p>@v.Year</p>
+        @*<p>@v.Brand.Name</p>*@
+    </div>
+}

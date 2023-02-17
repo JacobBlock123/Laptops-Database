@@ -1,0 +1,20 @@
+﻿@model List<Laptop>
+
+<form method="post" asp-controller="Laptops">
+    <label for="laptop1">Laptop 1</label>
+    <select name="laptop1">
+        @foreach (var v in Model) 
+        {
+            <option>@v.Model</option>
+        }
+    </select>        
+
+    <label for="laptop2">Laptop 2</label>
+    <select name="laptop2">
+        @foreach (var v in Model) 
+        {
+            <option>@v.Model</option>
+        }
+    </select>
+    <button type="submit">Submit</button>
+</form>

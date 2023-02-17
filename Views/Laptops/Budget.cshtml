@@ -1,0 +1,12 @@
+﻿@model Laptop[]
+
+@foreach (var v in Model)
+{
+    <div>
+        <h2>@v.Model</h2>
+        <p>Id: @v.Id</p>
+        @*<p>Brand: @v.Brand.Name</p>*@        
+        <p>Price: @v.Price</p>
+        <p>Year: @v.Year</p>
+    </div>
+}
